@@ -1,0 +1,21 @@
+Daily DevOps
+1 hour – Introduction practice
+
+2 hours – Hands-on learning practice
+
+30 minutes – English communication practice
+
+15 minutes – Recap session to summarize what you learned
+
+
+Tomorrow's To-Do List (Day 03)
+
+Attend Linux/DevOps learning class (2 hours)
+
+Review and study introductory presentation material (1 hour)
+
+English speaking or writing practice (30 mins)
+
+Practical implementation and command practice in WSL (2 hours)
+
+Daily recap session — write down notes and summarize key takeaways (15 mins)

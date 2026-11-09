@@ -1,0 +1,30 @@
+Daily DevOps
+
+1 hour – Introduction to advanced CI/CD concepts and infrastructure provisioning
+
+1 hour – Jenkins pipeline practice with Git integration, build, testing and deployment stages
+
+1 hour – GitLab CI/CD pipeline practice with Docker build, push and Kubernetes deployment
+
+1 hour – Ansible user creation and permission management practice
+
+1 hour – Terraform EC2 provisioning with tags and EBS volume configuration
+
+30 minutes – English communication practice
+
+15 minutes – Recap session to summarize what you learned
+
+
+Tomorrow's To-Do List (Day 06)
+
+Attend Linux/DevOps learning class (2 hours)
+
+Review and study introductory presentation material (1 hour)
+
+Practice CI/CD concepts and pipeline implementation (1 hour)
+
+Perform hands-on infrastructure and deployment exercises (1 hour)
+
+English speaking or writing practice (30 minutes)
+
+Daily recap session — write down notes and summarize key takeaways (15 minutes)

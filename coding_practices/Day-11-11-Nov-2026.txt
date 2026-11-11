@@ -1,0 +1,216 @@
+
+Day 11 — Kubernetes with Helm, Advanced Terraform and GitLab CI/CD
+
+1. ANSIBLE — Install Helm on Server
+
+- name: Install Helm
+  hosts: all
+  become: yes
+  tasks:
+    - name: Download Helm
+      get_url:
+        url: https://get.helm.sh/helm-v3.7.0-linux-amd64.tar.gz
+        dest: /tmp/helm.tar.gz
+
+    - name: Extract Helm
+      unarchive:
+        src: /tmp/helm.tar.gz
+        dest: /tmp/
+        remote_src: yes
+
+    - name: Copy Helm binary
+      copy:
+        src: /tmp/linux-amd64/helm
+        dest: /usr/local/bin/helm
+        remote_src: yes
+        mode: '0755'
+
+Note:
+- get_url downloads the Helm archive.
+- unarchive extracts the downloaded archive.
+- copy places the Helm binary in /usr/local/bin.
+- Helm is used to manage Kubernetes applications through charts.
+- The example installs Helm v3.7.0; a newer version can be used for current environments.
+
+
+2. TERRAFORM — Provision EC2 with Elastic IP
+
+resource "aws_instance" "pathnex_ec2" {
+  ami           = "ami-0abcd1234abcd1234"
+  instance_type = "t3.medium"
+
+  tags = {
+    Name = "Pathnex-EC2"
+  }
+}
+
+resource "aws_eip" "pathnex_eip" {
+  domain   = "vpc"
+  instance = aws_instance.pathnex_ec2.id
+
+  tags = {
+    Name = "Pathnex-Elastic-IP"
+  }
+}
+
+Note:
+- EC2 provides virtual compute capacity.
+- Elastic IP is a static public IPv4 address.
+- The EIP is associated with the EC2 instance.
+- Terraform automatically understands the dependency through the instance reference.
+- Replace the example AMI ID with a valid AMI for your AWS region.
+
+
+3. KUBERNETES — Helm Chart for Nginx Ingress Controller
+
+Add the Helm repository:
+
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+
+Update Helm repositories:
+
+helm repo update
+
+Install Nginx Ingress Controller:
+
+helm upgrade --install pathnex-nginx ingress-nginx/ingress-nginx \
+  --namespace ingress-nginx \
+  --create-namespace
+
+Verify installation:
+
+helm list -n ingress-nginx
+
+kubectl get pods -n ingress-nginx
+
+kubectl get svc -n ingress-nginx
+
+Note:
+- Helm charts package Kubernetes resources.
+- helm repo add registers a chart repository.
+- helm repo update refreshes available chart information.
+- helm upgrade --install installs the chart or upgrades an existing release.
+- Nginx Ingress Controller manages external HTTP/HTTPS routing into Kubernetes.
+- The older stable/nginx-ingress chart repository is deprecated.
+
+
+4. JENKINSFILE — Multi-Stage Pipeline
+
+pipeline {
+    agent any
+
+    environment {
+        IMAGE_NAME = 'pathnex-web-app'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/pathnex/sample-repo.git'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    docker.build("${env.IMAGE_NAME}")
+                }
+            }
+        }
+
+        stage('Push Docker Image') {
+            steps {
+                script {
+                    docker.withRegistry(
+                        'https://registry-1.docker.io',
+                        'docker-credentials'
+                    ) {
+                        docker.image("${env.IMAGE_NAME}").push('latest')
+                    }
+                }
+            }
+        }
+
+        stage('Deploy to Kubernetes') {
+            steps {
+                script {
+                    sh 'kubectl apply -f deployment.yaml'
+                }
+            }
+        }
+    }
+}
+
+Note:
+- Checkout retrieves source code from GitHub.
+- Build creates the Docker image.
+- Push uploads the image to Docker Hub.
+- Deploy applies Kubernetes configuration.
+- Jenkins requires Docker, kubectl and valid registry and Kubernetes credentials.
+- Replace the sample repository URL with your actual repository.
+
+
+5. GITLAB CI/CD — Build, Push and Deploy with Helm
+
+stages:
+  - build
+  - push
+  - deploy
+
+variables:
+  IMAGE_NAME: "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA"
+
+build:
+  stage: build
+  script:
+    - docker build -t "$IMAGE_NAME" .
+
+push:
+  stage: push
+  script:
+    - echo "$CI_REGISTRY_PASSWORD" | docker login "$CI_REGISTRY" -u "$CI_REGISTRY_USER" --password-stdin
+    - docker push "$IMAGE_NAME"
+
+deploy:
+  stage: deploy
+  script:
+    - helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+    - helm repo update
+    - helm upgrade --install pathnex-nginx ingress-nginx/ingress-nginx --namespace ingress-nginx --create-namespace
+
+Note:
+- Build creates the Docker image.
+- Push authenticates and uploads the image to GitLab Container Registry.
+- Deploy installs or upgrades the Nginx Ingress Controller using Helm.
+- GitLab Runner requires Docker-compatible execution, Helm, kubectl where needed, and Kubernetes access.
+- CI/CD variables provide registry credentials.
+- For deploying your own application, configure its Helm chart to use the image built in the pipeline.
+
+
+6. DOCKER — EXPOSE and Port Mapping
+
+Dockerfile:
+
+FROM nginx
+
+EXPOSE 80
+
+Run the container:
+
+docker run -d -p 8080:80 nginx
+
+Verify:
+
+docker ps
+
+Access the application:
+
+http://localhost:8080
+
+Note:
+- FROM nginx selects the Nginx base image.
+- EXPOSE 80 documents the container port.
+- EXPOSE does not publish the port to the host.
+- -d runs the container in detached mode.
+- -p 8080:80 maps host port 8080 to container port 80.
+

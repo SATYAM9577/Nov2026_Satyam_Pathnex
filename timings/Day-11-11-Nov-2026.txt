@@ -1,0 +1,35 @@
+
+Day 11 — 11 November 2026
+Topic: Kubernetes with Helm, Advanced Terraform and GitLab CI/CD
+
+Daily Activities:
+
+1. Ansible — Downloading, Extracting and Installing Helm
+   Duration: 1 Hour
+
+2. Terraform — EC2 Provisioning and Elastic IP Association
+   Duration: 1 Hour
+
+3. Kubernetes — Helm Repositories, Charts and Nginx Ingress Controller
+   Duration: 1 Hour
+
+4. Jenkins — Multi-Stage CI/CD Pipeline
+   Duration: 1 Hour
+
+5. GitLab CI/CD — Docker Build, Push and Helm Deployment
+   Duration: 1 Hour
+
+6. Docker — EXPOSE Instruction and Container Port Mapping
+   Duration: 1 Hour
+
+7. Revision and Documentation
+   Duration: 30 Minutes
+
+Tomorrow's To-Do List (Day 12):
+
+1. Practice Kubernetes Persistent Volumes and Persistent Volume Claims.
+2. Explore Helm chart structure, values.yaml and templates.
+3. Understand Terraform modules and remote state.
+4. Practice Jenkins credentials and pipeline automation.
+5. Explore GitLab CI/CD variables and deployment strategies.
+

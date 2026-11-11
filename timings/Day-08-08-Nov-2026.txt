@@ -1,0 +1,35 @@
+
+Day 08 — 08 November 2026
+Topic: Introduction to Docker and CI/CD Pipelines
+
+Daily Activities:
+
+1. Ansible — Installing Docker Compose and Managing Dependencies
+   Duration: 1 Hour
+
+2. Terraform — EC2 Provisioning, Security Groups and EBS Volumes
+   Duration: 1 Hour
+
+3. Kubernetes — Service Configuration and NodePort
+   Duration: 1 Hour
+
+4. Jenkins — Building and Pushing Docker Images
+   Duration: 1 Hour
+
+5. GitLab CI/CD — Docker Image Build and Push Pipeline
+   Duration: 1 Hour
+
+6. Docker — Creating and Running an Alpine Linux Container
+   Duration: 1 Hour
+
+7. Revision and Documentation
+   Duration: 30 Minutes
+
+Tomorrow's To-Do List (Day 09):
+
+1. Practice Docker networking and volume management.
+2. Explore Docker Compose multi-container applications.
+3. Understand Jenkins pipeline stages and triggers.
+4. Practice GitLab CI/CD variables and pipeline jobs.
+5. Revise Kubernetes Services and networking.
+

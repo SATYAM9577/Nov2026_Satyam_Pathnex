@@ -1,0 +1,35 @@
+
+Day 10 — 10 November 2026
+Topic: Advanced Kubernetes, Jenkins, and GitLab CI/CD
+
+Daily Activities:
+
+1. Ansible — Managing Docker Containers for Multiple Applications
+   Duration: 1 Hour
+
+2. Terraform — VPC Architecture with Public and Private Subnets
+   Duration: 1 Hour
+
+3. Kubernetes — StatefulSets, Headless Services and Persistent Storage
+   Duration: 1 Hour
+
+4. Jenkins — Building, Pushing and Deploying Docker Images
+   Duration: 1 Hour
+
+5. GitLab CI/CD — Automated Build, Push and Kubernetes Deployment
+   Duration: 1 Hour
+
+6. Docker — Working Directory, COPY and Container Filesystem
+   Duration: 1 Hour
+
+7. Revision and Documentation
+   Duration: 30 Minutes
+
+Tomorrow's To-Do List (Day 11):
+
+1. Practice Kubernetes Persistent Volumes and Persistent Volume Claims.
+2. Explore Kubernetes ConfigMaps, Secrets and environment variables.
+3. Understand Terraform modules and reusable infrastructure.
+4. Practice Jenkins pipeline stages and post-build actions.
+5. Explore GitLab CI/CD pipeline variables and deployment strategies.
+

@@ -1,0 +1,30 @@
+Day 07 — 07 November 2026
+Topic: Automating Cloud Infrastructure with Terraform & Ansible
+
+Daily Activities:
+
+1. Terraform — IAM Roles, Instance Profiles and EC2 Provisioning
+   Duration: 1 Hour
+
+2. Ansible — Installing Nginx and Configuring Services
+   Duration: 1 Hour
+
+3. Kubernetes — ConfigMaps and Secrets Management
+   Duration: 1 Hour
+
+4. Shell Scripting — Log Archiving and Automation
+   Duration: 1 Hour
+
+5. Docker — Building and Running a Java Application
+   Duration: 1 Hour
+
+6. Revision and Documentation
+   Duration: 30 Minutes
+
+Tomorrow's To-Do List (Day 08):
+
+1. Practice Terraform Variables, Outputs and Modules.
+2. Explore Ansible Playbooks and Handlers.
+3. Practice Kubernetes Deployment and Service YAML.
+4. Understand Docker Image Building and Container Management.
+5. Revise Linux Shell Scripting.

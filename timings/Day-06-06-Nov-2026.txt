@@ -1,0 +1,32 @@
+Daily DevOps
+
+1 hour – Introduction to CloudFormation and advanced Kubernetes concepts
+
+1 hour – Ansible practice for Docker installation and service management
+
+1 hour – Terraform practice for VPC and EC2 infrastructure provisioning
+
+1 hour – Kubernetes Pod configuration and volume mounting
+
+30 minutes – Shell scripting practice for checking running services
+
+30 minutes – Docker and Node.js application containerization practice
+
+30 minutes – English communication practice
+
+15 minutes – Recap session to summarize what you learned
+
+
+Tomorrow's To-Do List (Day 07)
+
+Attend Linux/DevOps learning class (2 hours)
+
+Review and study presentation material (1 hour)
+
+Practice Ansible, Terraform and Kubernetes concepts (1 hour)
+
+Perform hands-on Docker and shell scripting exercises (1 hour)
+
+English speaking or writing practice (30 minutes)
+
+Daily recap session — write down notes and summarize key takeaways (15 minutes)

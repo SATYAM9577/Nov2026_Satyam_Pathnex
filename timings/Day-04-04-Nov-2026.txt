@@ -1,0 +1,18 @@
+**DAILY LEARNING & PRACTICE LOG**
+
+**Date:** 04 November 2026  
+**Day:** 04
+
+**Today's Activities:**
+- Learned Linux fundamentals and explored important Linux commands.
+- Revised and recapped previously covered topics during the evening class.
+- Practiced Linux commands through hands-on exercises.
+- Documented the learning progress and pushed the practice files to GitHub.
+
+**Tomorrow's Plan:**
+- Continue learning Linux commands and advanced concepts.
+- Practice file management, permissions, process management, and command-line operations.
+- Perform hands-on exercises to strengthen Linux fundamentals.
+- Continue maintaining daily learning records and pushing updates to GitHub.
+
+**Status:** Completed

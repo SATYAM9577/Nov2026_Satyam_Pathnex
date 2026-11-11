@@ -1,0 +1,33 @@
+Day 09 — 09 November 2026
+Topic: Docker Integration with Jenkins & GitLab
+
+Daily Activities:
+
+1. Ansible — Pulling Docker Images and Running Nginx Containers
+   Duration: 1 Hour
+
+2. Terraform — EC2 Launch Templates and Auto Scaling Groups
+   Duration: 1 Hour
+
+3. Kubernetes — Deployments and Horizontal Pod Autoscaler
+   Duration: 1 Hour
+
+4. Jenkins — Deploying Applications to Kubernetes
+   Duration: 1 Hour
+
+5. GitLab CI/CD — Kubernetes Deployment Automation
+   Duration: 1 Hour
+
+6. Docker — Environment Variables and Container Configuration
+   Duration: 1 Hour
+
+7. Revision and Documentation
+   Duration: 30 Minutes
+
+Tomorrow's To-Do List (Day 10):
+
+1. Practice Docker networking and volume management.
+2. Explore Kubernetes ConfigMaps and Secrets.
+3. Understand Kubernetes resource requests and limits.
+4. Practice Terraform modules and variables.
+5. Explore Jenkins and GitLab pipeline automation.

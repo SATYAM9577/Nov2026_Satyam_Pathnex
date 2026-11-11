@@ -1,0 +1,164 @@
+
+Day 09 — Docker Integration with Jenkins & GitLab
+
+1. ANSIBLE — Setup Docker Container for Nginx
+
+- name: Setup Docker Container for Nginx
+  hosts: all
+  become: yes
+  tasks:
+    - name: Pull Nginx image
+      docker_image:
+        name: nginx
+        source: pull
+
+    - name: Run Nginx container
+      docker_container:
+        name: nginx-container
+        image: nginx
+        state: started
+        published_ports:
+          - "8080:80"
+
+Note:
+- docker_image pulls the Nginx image.
+- docker_container creates and starts the container.
+- Port 8080 on the host maps to port 80 inside the container.
+- Docker Engine and the required Ansible Docker collection must be installed.
+
+
+2. TERRAFORM — EC2 with Auto Scaling Group
+
+resource "aws_launch_template" "example" {
+  name_prefix   = "pathnex-template"
+  image_id      = "ami-0abcd1234abcd1234"
+  instance_type = "t3.medium"
+}
+
+resource "aws_autoscaling_group" "example" {
+  name                = "pathnex-asg"
+  desired_capacity    = 2
+  max_size            = 3
+  min_size            = 1
+
+  vpc_zone_identifier = ["subnet-12345678"]
+
+  launch_template {
+    id      = aws_launch_template.example.id
+    version = "$Latest"
+  }
+}
+
+Note:
+- Launch Template defines EC2 instance configuration.
+- Auto Scaling Group maintains the desired number of instances.
+- Replace the example AMI and subnet ID with valid values.
+- The subnet must belong to the selected VPC and availability zones.
+
+
+3. KUBERNETES — Deployment and Horizontal Pod Autoscaler (HPA)
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pathnex-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pathnex-app
+  template:
+    metadata:
+      labels:
+        app: pathnex-app
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: 100m
+            limits:
+              cpu: 500m
+
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: pathnex-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: pathnex-deployment
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 50
+
+Note:
+- Deployment manages the desired number of Pods.
+- HPA automatically adjusts replicas based on resource utilization.
+- CPU resource requests are required for CPU utilization-based scaling.
+- Metrics Server must be available in the cluster.
+
+
+4. JENKINSFILE — Deploy to Kubernetes
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Deploy to Kubernetes') {
+            steps {
+                sh 'kubectl apply -f deployment.yaml'
+            }
+        }
+    }
+}
+
+Note:
+- Jenkins executes the kubectl command.
+- Jenkins agent needs kubectl and valid Kubernetes credentials.
+- deployment.yaml contains the Kubernetes deployment configuration.
+
+
+5. GITLAB CI/CD — Deploy to Kubernetes
+
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  script:
+    - kubectl apply -f kubernetes/deployment.yaml
+
+Note:
+- GitLab runner executes the deployment command.
+- Runner needs kubectl and valid cluster credentials.
+- Kubernetes deployment manifest is stored in the repository.
+
+
+6. DOCKER — Environment Variables
+
+Dockerfile:
+
+FROM ubuntu:22.04
+
+ENV INSTITUTE=Pathnex
+ENV COURSE=DevOps
+
+CMD ["sh", "-c", "echo \"$INSTITUTE - $COURSE\""]
+
+Note:
+- ENV defines environment variables inside the image.
+- CMD specifies the default command executed when the container starts.
+- Output: Pathnex - DevOps
+

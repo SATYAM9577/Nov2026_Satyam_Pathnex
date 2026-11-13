@@ -1,0 +1,128 @@
+
+
+Day 07 — Automating Cloud Infrastructure with Terraform & Ansible
+
+1. ANSIBLE — Setup Nginx with Custom Configuration
+
+- name: Setup Nginx with Custom Config
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install nginx
+      yum:
+        name: nginx
+        state: present
+
+    - name: Copy custom nginx.conf
+      copy:
+        src: nginx.conf
+        dest: /etc/nginx/nginx.conf
+
+    - name: Start nginx service
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+
+2. TERRAFORM — Provision EC2 with IAM Role
+
+resource "aws_iam_role" "ec2_role" {
+  name = "pathnex_ec2_role"
+
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [{
+      Action = "sts:AssumeRole"
+      Effect = "Allow"
+      Principal = {
+        Service = "ec2.amazonaws.com"
+      }
+    }]
+  })
+}
+
+resource "aws_iam_instance_profile" "ec2_profile" {
+  name = "pathnex_ec2_profile"
+  role = aws_iam_role.ec2_role.name
+}
+
+resource "aws_instance" "pathnex_ec2" {
+  ami                  = "ami-0abcd1234abcd1234"
+  instance_type        = "t2.medium"
+  iam_instance_profile = aws_iam_instance_profile.ec2_profile.name
+
+  tags = {
+    Name = "Pathnex-EC2"
+  }
+}
+
+Note:
+- Replace the example AMI ID with a valid AMI for your AWS region.
+- EC2 uses an IAM instance profile to receive permissions from an IAM role.
+
+
+3. KUBERNETES — ConfigMap and Secret Management
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pathnex-config
+data:
+  app.properties: |
+    key=value
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: pathnex-secret
+type: Opaque
+data:
+  password: cGF0aG5leHBhc3M=
+
+Note:
+- ConfigMap stores non-sensitive configuration.
+- Secret stores sensitive information.
+- Secret data is Base64 encoded, not automatically encrypted.
+
+
+4. SHELL SCRIPT — Archive Logs
+
+#!/bin/bash
+
+tar -czf /var/log/archived_logs.tar.gz /var/log/*.log
+
+Note:
+- tar creates an archive.
+- -c creates an archive.
+- -z compresses using gzip.
+- -f specifies the archive filename.
+
+
+5. DOCKER — Java Application
+
+Java source file: Hello.java
+
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello Pathnex");
+    }
+}
+
+Dockerfile:
+
+FROM openjdk:17
+
+WORKDIR /opt/pathnex/java-app
+
+COPY Hello.java .
+
+RUN javac Hello.java
+
+CMD ["java", "-cp", "/opt/pathnex/java-app", "Hello"]
+
+Note:
+- javac compiles Java source code.
+- java executes the compiled Java class.
+- Docker packages the application and its runtime environment.

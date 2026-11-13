@@ -1,0 +1,33 @@
+
+DAY 12 — 12 NOVEMBER 2026
+TOPIC: SCALING APPLICATIONS AND AUTOMATION
+
+1. Ansible — AWS Auto Scaling Group (ASG)
+   - Configure Launch Templates and ASG capacity.
+
+2. Terraform — ALB and EC2
+   - Create EC2 instances, Load Balancer, Target Groups and Listeners.
+
+3. Kubernetes — HPA and LoadBalancer
+   - Configure CPU-based autoscaling and expose applications.
+
+4. Jenkins — Parallel Pipeline
+   - Run Build and Test stages in parallel, followed by Deploy.
+
+5. GitLab CI/CD — Parallel Jobs
+   - Automate Docker build, testing and deployment.
+
+6. Docker — Volumes
+   - Create, mount and inspect named volumes for persistent data.
+
+7. Revision and Documentation — 30 minutes
+   - Revise concepts, commands and practical exercises.
+
+DAY 13 — TO-DO
+- Ansible: Roles and reusable playbooks.
+- Terraform: Remote state and state locking.
+- Kubernetes: Cluster Autoscaler.
+- Jenkins: Parameters and environment variables.
+- GitLab CI/CD: Artifacts and cache.
+- Docker: Bind mounts vs named volumes.
+

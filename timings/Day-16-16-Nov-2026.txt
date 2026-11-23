@@ -1,0 +1,33 @@
+
+DAY 16 — 16 NOVEMBER 2026
+TOPIC: ADVANCED CLOUDFORMATION AND MULTI-REGION DEPLOYMENTS
+
+1. Ansible — Multi-Region EC2
+   - Automate EC2 instance creation in multiple AWS regions.
+
+2. Terraform — Multi-Region Infrastructure
+   - Create VPCs and EC2 instances across regions.
+
+3. Kubernetes — Multi-Cluster Deployment
+   - Understand deployments and services across clusters.
+
+4. Jenkins — Multi-Cluster CI/CD
+   - Build, test and deploy applications to different clusters.
+
+5. GitLab CI/CD — Multi-Region Deployment
+   - Automate deployments using Kubernetes contexts.
+
+6. Docker — Shell Script Execution
+   - Execute shell scripts inside Docker containers.
+
+7. Revision — 30 minutes
+   - Revise commands and practical concepts.
+
+DAY 17 — TO-DO
+- Ansible: Dynamic inventory and roles.
+- Terraform: Provider aliases and remote state.
+- Kubernetes: Multi-cluster management and contexts.
+- Jenkins: Shared libraries and deployment approvals.
+- GitLab CI/CD: Parallel deployments and environments.
+- Docker: Entrypoint, CMD and container troubleshooting.
+

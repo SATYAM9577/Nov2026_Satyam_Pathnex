@@ -1,0 +1,33 @@
+
+DAY 21 — 21 NOVEMBER 2026
+TOPIC: DISASTER RECOVERY AND BACKUP STRATEGIES
+
+1. Ansible — Backup and Restore Files
+   - Automate file backup, transfer and restoration.
+
+2. Terraform — S3 Cross-Region Backup
+   - Configure S3 buckets and versioning.
+
+3. Kubernetes — Persistent Volumes
+   - Understand StatefulSets, PVCs and data persistence.
+
+4. Jenkins — Workspace Backup
+   - Automate workspace backup and restoration.
+
+5. GitLab CI/CD — Backup and Restore
+   - Backup and restore deployment files.
+
+6. Docker — Docker Compose
+   - Manage containerized applications using Compose.
+
+7. Revision — 30 minutes
+   - Revise commands and practical concepts.
+
+DAY 22 — TO-DO
+- Ansible: Scheduled backups.
+- Terraform: S3 lifecycle and replication.
+- Kubernetes: Volume snapshots and recovery.
+- Jenkins: Backup automation.
+- GitLab CI/CD: Artifacts and retention.
+- Docker: Compose networking and volumes.
+

@@ -1,0 +1,33 @@
+
+DAY 17 — 17 NOVEMBER 2026
+TOPIC: MULTI-CLOUD DEPLOYMENTS, AUTO-HEALING AND ADVANCED CI/CD
+
+1. Ansible — Auto-healing Web Servers
+   - Configure Nginx service and systemd auto-restart.
+
+2. Terraform — AWS and Azure
+   - Provision infrastructure across multiple cloud providers.
+
+3. Kubernetes — Self-Healing
+   - Configure liveness and readiness probes.
+
+4. Jenkins — Rolling Deployments
+   - Automate build, test and Kubernetes rollout.
+
+5. GitLab CI/CD — Multi-Cloud Deployment
+   - Deploy applications to AWS and Azure clusters.
+
+6. Docker — MySQL Container
+   - Run MySQL containers and understand data storage paths.
+
+7. Revision — 30 minutes
+   - Revise commands and practical concepts.
+
+DAY 18 — TO-DO
+- Ansible: Roles, handlers and error handling.
+- Terraform: Variables, outputs and modules.
+- Kubernetes: Startup probes and resource limits.
+- Jenkins: Rollback and deployment strategies.
+- GitLab CI/CD: Pipeline rules and environments.
+- Docker: Volumes and MySQL data persistence.
+

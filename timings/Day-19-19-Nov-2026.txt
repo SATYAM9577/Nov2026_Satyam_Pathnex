@@ -1,0 +1,33 @@
+
+DAY 19 — 19 NOVEMBER 2026
+TOPIC: ADVANCED MONITORING, LOGGING AND SECURITY
+
+1. Ansible — Prometheus
+   - Automate Prometheus and Node Exporter installation.
+
+2. Terraform — CloudWatch
+   - Create CloudWatch log groups and log streams.
+
+3. Kubernetes — Fluentd
+   - Deploy Fluentd for centralized log collection.
+
+4. Jenkins — Monitoring Integration
+   - Integrate monitoring checks into deployment pipelines.
+
+5. GitLab CI/CD — Monitoring and Logging
+   - Automate deployment and monitoring verification.
+
+6. Docker — Flask Application
+   - Containerize a Python Flask application.
+
+7. Revision — 30 minutes
+   - Revise commands and practical concepts.
+
+DAY 20 — TO-DO
+- Ansible: Monitoring automation and handlers.
+- Terraform: CloudWatch alarms and metrics.
+- Kubernetes: Prometheus and Grafana monitoring.
+- Jenkins: Pipeline notifications and monitoring.
+- GitLab CI/CD: Security scanning and quality checks.
+- Docker: Container logs and health checks.
+

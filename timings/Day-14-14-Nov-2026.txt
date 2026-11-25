@@ -1,0 +1,33 @@
+
+DAY 14 — 14 NOVEMBER 2026
+TOPIC: KUBERNETES ADVANCED CONCEPTS AND MULTI-ENVIRONMENT DEPLOYMENTS
+
+1. Ansible — Nginx Reverse Proxy
+   - Configure Nginx as a reverse proxy.
+
+2. Terraform — S3 Bucket
+   - Configure S3 versioning and access logging.
+
+3. Kubernetes — Ingress
+   - Configure Nginx Ingress and routing rules.
+
+4. Jenkins — CI/CD Pipeline
+   - Automate Build, Test and Kubernetes Deployment.
+
+5. GitLab CI/CD — Helm Deployment
+   - Configure multi-stage build, push and deployment.
+
+6. Docker — CMD vs ENTRYPOINT
+   - Understand container startup commands and execution.
+
+7. Revision — 30 minutes
+   - Revise commands and practical concepts.
+
+DAY 15 — TO-DO
+- Ansible: Roles and handlers.
+- Terraform: Remote backend and state locking.
+- Kubernetes: Namespaces and Network Policies.
+- Jenkins: Shared Libraries.
+- GitLab CI/CD: Environments and rollback.
+- Docker: Multi-stage builds.
+

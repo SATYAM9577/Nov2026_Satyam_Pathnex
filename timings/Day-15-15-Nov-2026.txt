@@ -1,0 +1,33 @@
+
+DAY 15 — 15 NOVEMBER 2026
+TOPIC: AUTOMATION WITH TERRAFORM, ANSIBLE AND CI/CD PIPELINES
+
+1. Ansible — Multi-Host Web Deployment
+   - Copy application files and manage web services.
+
+2. Terraform — EC2 with ALB
+   - Provision EC2 instances and configure load balancing.
+
+3. Kubernetes — Redis with Helm
+   - Deploy Redis with persistent storage using Helm.
+
+4. Jenkins — Multi-Environment Deployment
+   - Automate build, test and environment-specific deployment.
+
+5. GitLab CI/CD — Environment-Specific Deployment
+   - Configure automated development and production deployments.
+
+6. Docker — Multiple RUN Commands
+   - Understand RUN instructions and Docker image layers.
+
+7. Revision — 30 minutes
+   - Revise commands and practical concepts.
+
+DAY 16 — TO-DO
+- Ansible: Roles, variables and templates.
+- Terraform: Modules and remote state.
+- Kubernetes: StatefulSets and persistent storage.
+- Jenkins: Pipeline parameters and approvals.
+- GitLab CI/CD: Rollback strategies.
+- Docker: Image optimization and multi-stage builds.
+

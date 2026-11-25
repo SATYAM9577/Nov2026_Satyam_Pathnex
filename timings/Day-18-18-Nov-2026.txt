@@ -1,0 +1,33 @@
+
+DAY 18 — 18 NOVEMBER 2026
+TOPIC: HIGH AVAILABILITY, MULTI-REGION AND AUTO-SCALING
+
+1. Ansible — HAProxy
+   - Install, configure and manage HAProxy load balancing.
+
+2. Terraform — ASG with ALB
+   - Configure EC2 Auto Scaling across multiple subnets.
+
+3. Kubernetes — HPA
+   - Configure Pod autoscaling and multiple replicas.
+
+4. Jenkins — Blue-Green Deployment
+   - Automate application deployment using blue-green strategy.
+
+5. GitLab CI/CD — Blue-Green Deployment
+   - Automate Kubernetes deployments and rollout verification.
+
+6. Docker — Redis
+   - Run Redis containers and understand data persistence.
+
+7. Revision — 30 minutes
+   - Revise commands and practical concepts.
+
+DAY 19 — TO-DO
+- Ansible: Load balancing and service handlers.
+- Terraform: Launch Templates and ASG policies.
+- Kubernetes: Cluster Autoscaler and resource metrics.
+- Jenkins: Rollback and deployment approvals.
+- GitLab CI/CD: Canary deployment.
+- Docker: Redis volumes and container networking.
+

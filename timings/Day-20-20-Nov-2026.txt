@@ -1,0 +1,33 @@
+
+DAY 20 — 20 NOVEMBER 2026
+TOPIC: SECURITY, HARDENING AND COMPLIANCE
+
+1. Ansible — Firewall
+   - Configure iptables rules and network access.
+
+2. Terraform — Security Groups
+   - Manage EC2 inbound and outbound traffic rules.
+
+3. Kubernetes — RBAC
+   - Configure roles, permissions and access control.
+
+4. Jenkins — Credentials
+   - Securely manage registry credentials and secrets.
+
+5. GitLab CI/CD — Secrets Management
+   - Secure pipeline variables and deployment credentials.
+
+6. Docker — Networking
+   - Create custom networks and connect containers.
+
+7. Revision — 30 minutes
+   - Revise commands and practical concepts.
+
+DAY 21 — TO-DO
+- Ansible: SSH hardening and user management.
+- Terraform: IAM roles and policies.
+- Kubernetes: ServiceAccounts and Network Policies.
+- Jenkins: Credential security and access control.
+- GitLab CI/CD: Secret detection and security scanning.
+- Docker: Network drivers and container isolation.
+

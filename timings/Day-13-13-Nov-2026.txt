@@ -1,0 +1,31 @@
+DAY 13 — 13 NOVEMBER 2026
+TOPIC: ADVANCED AUTOMATION WITH CLOUDFORMATION AND CI/CD
+
+1. Ansible — Multi-Node Nginx Setup
+   - Install and manage Nginx across multiple servers.
+
+2. Terraform — IAM Users and Policies
+   - Create IAM users and define access permissions.
+
+3. Kubernetes — ConfigMaps and Secrets
+   - Manage application configurations and sensitive data.
+
+4. Jenkins — Docker Build and Deployment
+   - Build Docker images and deploy applications.
+
+5. GitLab CI/CD — Helm Deployment
+   - Automate image build, push and Helm deployment.
+
+6. Docker — COPY vs ADD
+   - Understand file copying and archive extraction.
+
+7. Revision — 30 minutes
+   - Revise commands and practical concepts.
+
+DAY 14 — TO-DO
+- Ansible: Variables, handlers and templates.
+- Terraform: IAM roles and instance profiles.
+- Kubernetes: Ingress and Network Policies.
+- Jenkins: Multibranch pipelines.
+- GitLab: Artifacts and environments.
+- Docker: Multi-stage builds.
